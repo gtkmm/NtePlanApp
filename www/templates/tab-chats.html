@@ -1,0 +1,35 @@
+<ion-view view-title="Remarques" >
+
+
+  <ion-content>
+
+<form  ng-submit="sendComment()">
+<textarea rows="10" placeholder="Remarques médicaments" ng-model="comment"></textarea>
+
+<button class="button button-block button-dark">
+  Sauvegarder
+</button>
+</form>
+ <div class="dateStyle" ng-app ng-controller="cntrDate">
+    {{date | date:'MM/dd/yyyy hh:mma'}}
+</div>
+
+
+<!-- ***************************************************************************-->
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <img ng-src="img/comment.png">
+        <h2>{{chat.name}}</h2>
+        <p>{{chat.lastText}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+<!-- ***************************************************************************-->
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="Rappel">
+  <ion-content class="padding">
+
+    <label class="item item-input">
+          <span class="input-label">Médicament</span>
+          <input type="text">
+    </label>
+
+  <label class="item item-input">
+          <span class="input-label">Description</span>
+          <input type="text">
+    </label>
+
+
+
+    <label class="item item-input  row responsive-sm">
+
+     
+
+         <span class="input-label"> Heure de la notification </span>
+          <div ng-repeat="item in inputs" >
+          <input ng-model="item.value" type="time">
+          </div>
+
+
+    </label>
+ 
+<button ng-click="addfield()" class="button icon-right ion-plus-circled"> </button>
+
+
+<button class="button button-block button-dark">
+  Sauvegarder
+</button>
+
+  </ion-content>
+</ion-view>
